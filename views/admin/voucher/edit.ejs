@@ -45,10 +45,10 @@
                                                 <select class="form-control select2" style="width: 100%;" name="category" required>
                                                   <option selected="selected">Choose Category</option>
                                                   <% category.forEach(category =>{%>
-                                                    <option value="<%=category._id%>>"
-                                                    <% if (Category._id.toString()===voucher?.category?._id.toString())  {%>
+                                                    <option value="<%=category._id%>"
+                                                    <% if (Category._id.toString() === voucher?.category?._id.toString())  {%>
                                                         Selected
-                                                    <%=}%>
+                                                    <% }%>
                                                             >
                                                         <%=category.name%></option>
                                                   <% })%>
@@ -63,17 +63,17 @@
                                                 <div class="select2-purple">
                                                     <select class="form-control select2" multiple="multiple" data-placeholder="choose nominal" style="width: 100%;" name="nominals" required>
                                                  
-                                                  <% nominal.forEach(nominal =>{%
-                                                    <% voucher.nominals.forEach(voucherNominal =>{ %>
-                                                        <% if(nominal._id.toString()===voucherNominal._id.toString(){ %>
-                                                            Selected
-                                                        <%})%>
-
-                                                        
-                                                    <%})%>
-                                                    >
-                                                    <option value="<%=nominal._id%>"><%=nominal.coinName%><%=nominal.coinQuantity%></option>
-                                                  <% })%>
+                                                        <% nominal.forEach(nominal=>{ %>
+                                                            <option value="<%= nominal._id %>" <% voucher.nominals.forEach(voucherNominal=>{ %>
+                                                              <% if(nominal._id.toString()===voucherNominal._id.toString()){ %>
+                                                                selected
+                                                                <% } %>
+                                                                  <% }) %>
+                                                                    >
+                                                                    <%= nominal.coinName %>
+                                                                      <%= nominal.coinQuantity %>
+                                                            </option>
+                                                            <% }) %>
                                                 </select>
                                                 </div>
 
