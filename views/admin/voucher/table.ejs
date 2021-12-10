@@ -23,8 +23,9 @@
                 </td>
                 <td>
                     <% voucher[i].nominals.forEach(nominal => { %>
+                        console.log(nominals)
                         <span class="badge badge-warning">
-                <%= nominal.coinName %> <%= nominal.coinQuantity %> 
+                          <%= nominal.coinName %> <%= nominal.coinQuantity %> 
               </span>
                         <% }) %>
                 </td>
