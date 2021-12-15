@@ -1,4 +1,5 @@
 const config = require('../../config')
+const jwt = require ('jsonwebtoken')
 
 const Player = require('../player/model')
 
